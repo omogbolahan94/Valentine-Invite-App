@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Be My Val?</title>
+    <style>
+        body { text-align: center; font-family: 'Arial', sans-serif; background-color: #ffebee; padding-top: 50px; }
+        img { max-width: 300px; border-radius: 15px; }
+        button { background-color: #ff4081; color: white; border: none; padding: 15px 30px; font-size: 20px; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+        #celebration { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="ask">
+        <img src="{{ url_for('static', filename='val_me.jpeg') }}" alt="Cute Image">
+        <h1>Will you be my Valentine?</h1>
+        <button onclick="showCelebration()">YES! ❤️</button>
+    </div>
+
+    <div id="celebration">
+        <img src="{{ url_for('static', filename='celebrations.gif') }}" alt="Yay!">
+        <h1>Yay! See you on the 14th my Sugar Plum! 🎉</h1>
+    </div>
+
+    <script>
+        function showCelebration() {
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('celebration').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
